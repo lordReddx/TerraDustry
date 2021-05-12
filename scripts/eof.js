@@ -311,7 +311,7 @@ overlayBullet.pierce = true;
 overlayBullet.lifetime = 1 * 2;
 
 const eofSegment = prov(() => {
-	eofSegmentB = extend(UnitType, {
+	eofSegmentB = extendContent(UnitType, {
 		update(){
 			if((this.getParentUnit() == null || (this.getParentUnit().isDead() && this.getParentUnit() != null)) && !this.isDead()){
 				//this.kill();
@@ -688,7 +688,7 @@ const eofSegment = prov(() => {
 });
 
 const eofMain = prov(() => {
-	eofMainB = extend(UnitType, {
+	eofMainB = extendContent(UnitType, {
 		update(){
 			this.super$update();
 			
